@@ -1,10 +1,10 @@
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-SECRET_KEY = 'do@vkkugx4%(khfdh&_615w^b!%4i+*=s4o9m18rtfam_x*u9)'
-DEBUG = True
+SECRET_KEY = os.environ.get('SECRET_KEY', 'SOME+RANDOM+KEY(z9+3vnm(jb0u@&w68t#5_e8s9-lbfhv-')
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['herokutest01.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -86,3 +86,9 @@ CSRF_COOKIE_SECURE              = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
 SECURE_HSTS_SECONDS             = 1000000
 SECURE_FRAME_DENY               = True
+
+
+# import dj_database_url
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
+# DATABASES['default']['CONN_MAX_AGE'] = 500
