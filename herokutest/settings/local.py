@@ -4,7 +4,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = 'do@vkkugx4%(khfdh&_615w^b!%4i+*=s4o9m18rtfam_x*u9)'
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['herokutest01.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
